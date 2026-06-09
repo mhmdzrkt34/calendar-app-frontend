@@ -1,0 +1,625 @@
+/* ── Page shell ── */
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  background-color: #ecedf8;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Left panel ── */
+.login-left {
+  flex: 1;
+  position: relative;
+  padding: 40px 56px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* logo */
+.login-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1e1e3f;
+  z-index: 2;
+}
+
+.login-logo-icon {
+  width: 40px;
+  height: 40px;
+  background: #5457d4;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* headline */
+.login-headline {
+  margin-top: 60px;
+  z-index: 2;
+}
+
+.login-headline h1 {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1e1e3f;
+}
+
+.login-headline h1 span {
+  color: #5457d4;
+  display: block;
+}
+
+.login-headline p {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+/* blob decoration */
+.login-blob {
+  position: absolute;
+  bottom: 100px;
+  left: 120px;
+  width: 420px;
+  height: 380px;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+/* plant */
+.login-plant {
+  position: absolute;
+  bottom: 80px;
+  left: 40px;
+  width: 90px;
+  z-index: 2;
+}
+
+/* calendar card */
+.login-calendar-wrap {
+  position: absolute;
+  bottom: 140px;
+  left: 160px;
+  z-index: 2;
+}
+
+.login-calendar-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 20px 24px 16px;
+  box-shadow: 0 8px 32px rgba(84, 87, 212, 0.12);
+  width: 280px;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1e1e3f;
+  margin-bottom: 14px;
+}
+
+.cal-nav-btn {
+  background: none;
+  border: none;
+  cursor: default;
+  font-size: 16px;
+  color: #6b7280;
+  line-height: 1;
+  padding: 0 2px;
+}
+
+.cal-grid {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  text-align: center;
+}
+
+.cal-grid thead th {
+  color: #9ca3af;
+  font-weight: 600;
+  padding-bottom: 8px;
+  font-size: 11px;
+}
+
+.cal-grid tbody td {
+  width: 34px;
+  height: 30px;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.cal-grid tbody td.muted {
+  color: #d1d5db;
+}
+
+.cal-grid tbody td.today {
+  background: #5457d4;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: 700;
+}
+
+/* task card beneath calendar */
+.login-task-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 260px;
+  margin-top: 8px;
+  margin-left: auto;
+}
+
+.task-card-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.task-dot {
+  width: 10px;
+  height: 10px;
+  background: #5457d4;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.task-card-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e1e3f;
+}
+
+.task-card-sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+}
+
+.task-card-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Right panel ── */
+.login-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 56px;
+}
+
+/* wraps card + back-link + footer, stacked vertically */
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 480px;
+  gap: 16px;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 52px 48px 40px;
+  width: 100%;
+  box-shadow: 0 4px 40px rgba(84, 87, 212, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* shield icon */
+.login-shield-icon {
+  width: 64px;
+  height: 64px;
+  background: #ecedf8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.login-card h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1e1e3f;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.login-card .login-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 36px;
+  max-width: 300px;
+}
+
+/* form */
+.login-form {
+  width: 100%;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px 16px;
+  background: #fff;
+  transition: border-color 0.2s;
+}
+
+.input-wrapper:focus-within {
+  border-color: #5457d4;
+}
+
+.input-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: #374151;
+  background: transparent;
+}
+
+.input-wrapper input::placeholder {
+  color: #9ca3af;
+}
+
+.send-otp-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 16px;
+  background: #5457d4;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.send-otp-btn:hover {
+  background: #4547b8;
+}
+
+.send-otp-btn:active {
+  transform: scale(0.99);
+}
+
+/* divider hint */
+.login-hint {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  color: #9ca3af;
+  font-size: 13px;
+  text-align: center;
+}
+
+.login-hint::before,
+.login-hint::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+/* info box */
+.login-info-box {
+  width: 100%;
+  background: #f5f5fb;
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.login-info-box-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.login-info-box-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e1e3f;
+  margin-bottom: 4px;
+}
+
+.login-info-box-text {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+/* input error state */
+.input-wrapper.has-error {
+  border-color: #ef4444;
+}
+
+/* validation / api error message */
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ef4444;
+}
+
+.field-error.api-error {
+  margin-top: 10px;
+  justify-content: center;
+}
+
+/* ── OTP boxes ── */
+.otp-boxes {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.otp-box {
+  flex: 1;
+  height: 60px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  color: #1e1e3f;
+  outline: none;
+  background: #fff;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  min-width: 0;
+  caret-color: #5457d4;
+}
+
+.otp-box:focus {
+  border-color: #5457d4;
+  border-width: 2px;
+  box-shadow: 0 0 0 3px rgba(84, 87, 212, 0.12);
+}
+
+.otp-box.has-error {
+  border-color: #ef4444;
+}
+
+.otp-box:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* countdown row */
+.expire-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.expire-time {
+  color: #5457d4;
+  font-weight: 600;
+}
+
+.expire-time.expired {
+  color: #ef4444;
+}
+
+/* OTP subtitle email highlight */
+.otp-email-highlight {
+  color: #5457d4;
+  font-weight: 600;
+}
+
+/* resend link */
+.resend-link {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #5457d4;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+}
+
+.resend-link:hover { opacity: 0.75; }
+.resend-link:disabled { opacity: 0.4; cursor: not-allowed; }
+
+/* back to email link (below card) */
+.back-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.15s;
+}
+
+.back-link:hover { color: #374151; }
+
+/* loading spinner inside button */
+.btn-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.65s linear infinite;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.send-otp-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* footer (below card, shared by both steps) */
+.login-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ── Responsive ── */
+
+/* Tablet: shrink text & calendar */
+@media (max-width: 1100px) {
+  .login-left {
+    padding: 32px 32px;
+  }
+
+  .login-headline h1 {
+    font-size: 38px;
+  }
+
+  .login-calendar-wrap {
+    left: 100px;
+    bottom: 100px;
+  }
+
+  .login-blob {
+    left: 80px;
+    width: 360px;
+  }
+
+  .login-right {
+    padding: 40px 32px;
+  }
+
+  .login-card {
+    padding: 40px 32px 32px;
+  }
+}
+
+/* Mobile: hide left panel, full-width card */
+@media (max-width: 768px) {
+  .login-page {
+    flex-direction: column;
+    background: #ecedf8;
+  }
+
+  .login-left {
+    display: none;
+  }
+
+  .login-right {
+    flex: unset;
+    min-height: 100vh;
+    padding: 40px 16px 32px;
+    align-items: flex-start;
+  }
+
+  .login-panel {
+    max-width: 100%;
+  }
+
+  .login-card {
+    padding: 36px 24px 28px;
+    border-radius: 20px;
+  }
+
+  .login-card h2 {
+    font-size: 24px;
+  }
+
+  .send-otp-btn {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  .otp-box {
+    height: 52px;
+    font-size: 20px;
+    border-radius: 10px;
+  }
+
+  .otp-boxes {
+    gap: 6px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 400px) {
+  .login-right {
+    padding: 32px 12px 24px;
+  }
+
+  .login-card {
+    padding: 28px 16px 24px;
+  }
+
+  .otp-box {
+    height: 46px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+
+  .otp-boxes {
+    gap: 4px;
+  }
+}
