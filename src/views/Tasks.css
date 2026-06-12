@@ -633,6 +633,31 @@
 }
 
 @media (max-width: 640px) {
+  .tasks-nav {
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .tasks-nav-logo .logo-text {
+    display: none;
+  }
+
+  .tasks-nav-right {
+    gap: 8px;
+  }
+
+  .btn-upgrade {
+    padding: 7px 10px;
+  }
+
+  .btn-upgrade .btn-upgrade-text {
+    display: none;
+  }
+
+  .user-email {
+    display: none;
+  }
+
   .tasks-toolbar {
     flex-wrap: wrap;
     gap: 8px;
@@ -647,5 +672,26 @@
     gap: 12px;
     padding: 8px 12px;
     flex-wrap: wrap;
+  }
+
+  /* MUI X Scheduler event dialog — turn into a full-width bottom sheet
+     so it doesn't get positioned off-screen (it has a fixed 360-450px width) */
+  .MuiEventCalendar-eventDialogPaper {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 85vh !important;
+    border-radius: 16px 16px 0 0 !important;
+    overflow-y: auto !important;
+  }
+
+  .MuiEventCalendar-eventDialogContent {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box;
   }
 }

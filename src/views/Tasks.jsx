@@ -215,13 +215,13 @@ export const Tasks = () => {
           <div className="tasks-nav-logo-icon">
             <IconCalendarLogo />
           </div>
-          Task Calendar
+          <span className="logo-text">Task Calendar</span>
         </div>
 
         <div className="tasks-nav-right">
           <button className="btn-upgrade">
             <IconStar size={14} color="#5457d4" />
-            Upgrade to Pro
+            <span className="btn-upgrade-text">Upgrade to Pro</span>
           </button>
 
           <div className="tasks-nav-user">
